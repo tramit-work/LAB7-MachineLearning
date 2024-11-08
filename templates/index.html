@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLP CIFAR10 - Results</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8;
+            margin: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        h2 {
+            color: #3498db;
+            margin-top: 20px;
+        }
+        img {
+            display: block;
+            margin: 20px auto;
+            border: 5px solid #3498db;
+            border-radius: 10px;
+        }
+        pre {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow-x: auto;
+            margin-bottom: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MLP CIFAR10 - LAB 7</h1>
+        <h2>Image Preview:</h2>
+        <img src="data:image/png;base64,{{ result.img_html }}" alt="CIFAR10 Image">
+
+        <h2>Results:</h2>
+        <pre><strong>Z-Score Scaled Tensor:</strong>
+{{ result.zscore }}</pre>
+
+        <pre><strong>Min-Max Scaled Tensor:</strong>
+{{ result.min_max }}</pre>
+
+        <pre><strong>Linear Layer Output:</strong>
+{{ result.out }}</pre>
+
+        <pre><strong>Weight:</strong>
+{{ result.weight }}</pre>
+
+        <pre><strong>Bias:</strong>
+{{ result.bias }}</pre>
+    </div>
+</body>
+</html>
